@@ -1,0 +1,20 @@
+Hive.config(["$stateProvider", "$httpProvider", "$urlRouterProvider", "$locationProvider",
+  function($stateProvider, $httpProvider, $urlRouterProvider, $locationProvider) {
+  $stateProvider
+    .state('index', {
+      url: '/',
+      templateUrl: 'users/login.html',
+      controller: 'HomeController'
+    })
+
+
+    $httpProvider.defaults.withCredentials = true;
+    $urlRouterProvider.otherwise('/');
+    $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
+
+  }]).run(["$rootScope", "$state", function($rootScope, $state) {
+      $rootScope.$state = $state;
+    }]);
