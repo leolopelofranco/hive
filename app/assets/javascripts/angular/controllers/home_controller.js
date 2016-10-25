@@ -22,11 +22,10 @@ angular.module('Hive.controllers')
        } else {
          $scope.loggedIn = false;
        }
-     });
-
-     Facebook.api('/me', 'GET', {fields: 'name, picture.height(50).width(50)', access_token: response.authResponse.accessToken}, function(response) {
-       $scope.user = response;
-       console.log($scope.user)
+       Facebook.api('/me', 'GET', {fields: 'name, picture.height(50).width(50)', access_token: response.authResponse.accessToken}, function(response) {
+         $scope.user = response;
+         console.log($scope.user)
+       });
      });
     }
 
