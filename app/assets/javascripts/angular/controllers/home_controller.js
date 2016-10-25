@@ -24,7 +24,7 @@ angular.module('Hive.controllers')
        }
      });
 
-     Facebook.api('/me', 'GET', {fields: 'name, picture.height(50).width(50)'}, function(response) {
+     Facebook.api('/me', 'GET', {fields: 'name, picture.height(50).width(50)', access_token: response.authResponse.accessToken}, function(response) {
        $scope.user = response;
        console.log($scope.user)
      });
