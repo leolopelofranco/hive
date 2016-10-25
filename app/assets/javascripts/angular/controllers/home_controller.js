@@ -30,6 +30,13 @@ angular.module('Hive.controllers')
     }
 
 
+    role = function() {
+      Facebook.api('/me', 'GET', {fields: 'accounts.limit(100)', access_token: response.authResponse.accessToken}, function(response) {
+        console.log(response)
+      });
+    }
+
+
 
 
    $scope.getLoginStatus = function() {
@@ -37,6 +44,8 @@ angular.module('Hive.controllers')
    };
 
    getLoginStatus()
+
+   role()
 
 
 
