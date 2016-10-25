@@ -36,7 +36,7 @@ angular.module('Hive.controllers')
         console.log(response)
         if(response.status === 'connected') {
           $scope.loggedIn = true;
-          picture_data =  getpicture(response.authResponse.accessToken)
+          picture_data =  getPicture(response.authResponse.accessToken)
           page = role(response.authResponse.accessToken)
           $scope.passcode = true
           $scope.fb = false
@@ -53,7 +53,7 @@ angular.module('Hive.controllers')
        $rootScope.token = response.authResponse.accessToken
 
        if(response.status === 'connected') {
-         picture_data = getpicture(response.authResponse.accessToken)
+         picture_data = getPicture(response.authResponse.accessToken)
          page = role(response.authResponse.accessToken)
        }
      });
