@@ -22,18 +22,18 @@
         / .form-group
         /   i.side-icon.fa.fa-user
         /   input.form-control type="email" placeholder="What's your email?" ng-model="user.email"
-        .form-group ng-show="passcode"
+        .form-group
           i.side-icon.fa.fa-lock
           input.form-control type="password" placeholder="What's your passcode" ng-model="user.password"
-        .form-group ng-show="passcode"
+        .form-group 
           button.btn.btn-block.btn-info.red type="submit" Submit
         / .form-group
         /   p.align-center ----------- or -----------
-        .form-group ng-show="fb"
-          button.btn.btn-block.btn-info ng-click="fblogin()" 
-            i.add-margin-right.fa.fa-facebook
-            span 
-              | Sign in with Facebook
+        / .form-group ng-show="fb"
+        /   button.btn.btn-block.btn-info ng-click="fblogin()" 
+        /     i.add-margin-right.fa.fa-facebook
+        /     span 
+        /       | Sign in with Facebook
         / label.checkbox for="rememberMe"
         /   input type="checkbox" value="" id="rememberMe" data-toggle="checkbox"
         /   | Remember me
