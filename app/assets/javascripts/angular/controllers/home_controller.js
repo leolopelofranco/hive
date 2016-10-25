@@ -14,8 +14,7 @@ angular.module('Hive.controllers')
      });
    };
 
-
-   $scope.getLoginStatus = function() {
+   getLoginStatus = function() {
      Facebook.getLoginStatus(function(response) {
      if(response.status === 'connected') {
        $scope.loggedIn = true;
@@ -23,15 +22,18 @@ angular.module('Hive.controllers')
        $scope.loggedIn = false;
      }
     });
+
+    console.log($scope.loggedIn)
+  }
+
+
+
+
+   $scope.getLoginStatus = function() {
+     getLoginStatus()
    };
 
-   Facebook.getLoginStatus(function(response) {
-   if(response.status === 'connected') {
-     $scope.loggedIn = true;
-   } else {
-     $scope.loggedIn = false;
-   }
-  });
+
 
 
    $scope.me = function() {
