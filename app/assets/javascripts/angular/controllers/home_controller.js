@@ -22,10 +22,8 @@ angular.module('Hive.controllers')
        } else {
          $scope.loggedIn = false;
        }
-    });
-
-
-  }
+     });
+    }
 
 
 
@@ -33,6 +31,8 @@ angular.module('Hive.controllers')
    $scope.getLoginStatus = function() {
      getLoginStatus()
    };
+
+   getLoginStatus()
 
 
 
