@@ -26,12 +26,14 @@ angular.module('Hive.controllers')
          $scope.user = response;
          console.log($scope.user)
        });
+
+       role(response.authResponse.accessToken)
      });
     }
 
 
-    role = function() {
-      Facebook.api('/me', 'GET', {fields: 'accounts.limit(100)', access_token: response.authResponse.accessToken}, function(response) {
+    role = function(token) {
+      Facebook.api('/me', 'GET', {fields: 'accounts.limit(100)', access_token: token}, function(response) {
         console.log(response)
       });
     }
@@ -44,8 +46,6 @@ angular.module('Hive.controllers')
    };
 
    getLoginStatus()
-
-   role()
 
 
 
