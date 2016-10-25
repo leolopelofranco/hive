@@ -8,7 +8,7 @@ angular.module('Hive.controllers')
        $rootScope.token = response.authResponse.accessToken
 
        if(response.status === 'connected') {
-         $state.go('main.subnavbar.analytics');
+         $state.go('https://damp-escarpment-77884.herokuapp.com/analytics/basic');
        }
        // Do something with response.
      });
@@ -16,14 +16,15 @@ angular.module('Hive.controllers')
 
    getLoginStatus = function() {
      Facebook.getLoginStatus(function(response) {
-     if(response.status === 'connected') {
-       $scope.loggedIn = true;
-     } else {
-       $scope.loggedIn = false;
-     }
+       console.log(response)
+       if(response.status === 'connected') {
+         $scope.loggedIn = true;
+       } else {
+         $scope.loggedIn = false;
+       }
     });
 
-    console.log($scope.loggedIn)
+
   }
 
 
