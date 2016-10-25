@@ -14,15 +14,25 @@ angular.module('Hive.controllers')
      });
    };
 
+
    $scope.getLoginStatus = function() {
      Facebook.getLoginStatus(function(response) {
-       if(response.status === 'connected') {
-         $scope.loggedIn = true;
-       } else {
-         $scope.loggedIn = false;
-       }
-     });
+     if(response.status === 'connected') {
+       $scope.loggedIn = true;
+     } else {
+       $scope.loggedIn = false;
+     }
+    });
    };
+
+   Facebook.getLoginStatus(function(response) {
+   if(response.status === 'connected') {
+     $scope.loggedIn = true;
+   } else {
+     $scope.loggedIn = false;
+   }
+  });
+
 
    $scope.me = function() {
      Facebook.api('/me', function(response) {
@@ -30,4 +40,6 @@ angular.module('Hive.controllers')
        console.log($scope.user)
      });
    };
+
+
 }]);
