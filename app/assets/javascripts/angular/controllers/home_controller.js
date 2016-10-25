@@ -1,5 +1,5 @@
 angular.module('Hive.controllers')
-  .controller('HomeController', ["$scope", "$state", "Facebook", "$rootScope",  function($scope, $state, Facebook, $rootScope) {
+  .controller('HomeController', ["$scope", "$state", "Facebook", "$rootScope", '$window',  function($scope, $state, Facebook, $rootScope, $window) {
 
 
     $scope.passcode = false
