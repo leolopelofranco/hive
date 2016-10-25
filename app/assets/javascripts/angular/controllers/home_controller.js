@@ -15,7 +15,7 @@ angular.module('Hive.controllers')
      }
 
      if(result.type == 'honeypot_v0') {
-       $window.open('https://damp-escarpment-77884.herokuapp.com/analytics/basic', '_self')
+       $window.open('https://cryptic-ridge-33738.herokuapp.com/login', '_self')
      }
    }
 
