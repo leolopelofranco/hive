@@ -106,4 +106,20 @@ angular.module('Hive.services')
       return d.promise;
 
     }
+
+    this.hive = function(data) {
+      var d= $q.defer();
+      console.log(data)
+      $.ajax({
+        url: 'https://palmsolutions.co/api/v0/login.php',
+        type: 'POST',
+        dataType: 'json',
+        data: data,
+      }).success(function(data){
+        d.resolve(data);
+      });
+
+      return d.promise;
+    }
+
 }]);
