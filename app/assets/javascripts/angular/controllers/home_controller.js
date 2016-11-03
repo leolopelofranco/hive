@@ -17,7 +17,7 @@ angular.module('Hive.controllers')
      UserService.hive(data)
       .then(function(d){
         console.log(d)
-        // $window.open('https://e1fca0c3.ngrok.io/login?page_id=name', '_self')
+        $window.open('https://e1fca0c3.ngrok.io/login?page_id=' + d.page_id, '_self')
 
     });
 
