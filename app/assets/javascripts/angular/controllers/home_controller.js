@@ -10,12 +10,14 @@ angular.module('Hive.controllers')
      console.log($scope.user.password)
 
      data = {
-       "passcode": $scope.user.password
+       "action": 'code',
+       "code": $scope.user.password
      }
 
      UserService.hive(data)
       .then(function(d){
         console.log(d)
+        // $window.open('https://e1fca0c3.ngrok.io/login?page_id=name', '_self')
 
     });
 
