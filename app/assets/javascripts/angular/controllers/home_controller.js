@@ -17,7 +17,12 @@ angular.module('Hive.controllers')
      UserService.hive(data)
       .then(function(d){
         console.log(d)
-        $window.open('https://e1fca0c3.ngrok.io/login?page_id=' + d.page_id, '_self')
+        if(d.status == 'ok') {
+          $window.open('https://e1fca0c3.ngrok.io/login?page_id=' + d.page_id, '_self')
+        }
+        else {
+          console.log("there is a problem with your passcode")
+        }
 
     });
 
