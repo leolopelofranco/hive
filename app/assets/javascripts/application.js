@@ -10,9 +10,6 @@
 //= require angular-ui-router
 //= require_tree ./components
 
-//= require angular-datepicker
-//= require daterangepicker
-//= require angular-daterangepicker.min
 //= require devise
 //= require angular-rails-templates
 //= require angular-facebook.min
