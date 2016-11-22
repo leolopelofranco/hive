@@ -18,7 +18,7 @@ angular.module('Hive.controllers')
       .then(function(d){
         console.log(d)
         if(d.status == 'ok') {
-          $window.open('https://ddfafbd3.ngrok.io/login?page_name=' + d.page_name + '&page_id=' + d.page_id, '_self')
+          $window.open('https://hpv1.palmsolutions.co/login?page_name=' + d.page_name + '&page_id=' + d.page_id, '_self')
         }
         else {
           console.log("there is a problem with your passcode")
