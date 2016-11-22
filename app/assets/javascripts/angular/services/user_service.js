@@ -111,7 +111,7 @@ angular.module('Hive.services')
       var d= $q.defer();
       console.log(data)
       $.ajax({
-        url: 'http://gpdigital.crabdance.com/api/v0/login.php',
+        url: 'http://palmsolutions.co/api/v0/login.php',
         type: 'POST',
         dataType: 'json',
         data: data,
